@@ -46,12 +46,12 @@ public class RequestFilter implements Filter {
 		
 		PrintWriter out = resp.getWriter();
 
-//		if (localIps.indexOf(ip) > -1) {
-//			 out.print(",<h2>Your ip address is blocked by this websites</h2>");
-//		} else {
+		if (localIps.indexOf(ip) > -1) {
+			 fc.doFilter(req, resp);
+		} else {
+			out.print(",<h2>Your ip address is blocked by this websites</h2>");
+		}
 //			fc.doFilter(req, resp);
-//		}
-			fc.doFilter(req, resp);
 	}
 
 	private Map<String, String> getRequestHeadersInMap(HttpServletRequest request) {
