@@ -22,7 +22,7 @@ java 1.8 - Add java 8 as external folder
 2. In ROOT/WEB-INF/web.xml add the following lines
 	<filter>
     <filter-name>RNT-Filter</filter-name>
-    <filter-class>ai.rnt.interceptor.filter.RequestFilterr</filter-class>
+    <filter-class>ai.rnt.interceptor.filter.RequestFilter</filter-class>
    </filter>
    <filter-mapping>
 		<filter-name>RNT-Filter</filter-name>
